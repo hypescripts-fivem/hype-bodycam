@@ -1,0 +1,90 @@
+{
+    "title": "Axon Bodycam",
+    "target_label": "Yaka Kameraları",
+    "notify": {
+        "body_on": "Yaka kamerası açıldı, kayıt başladı.",
+        "body_off": "Yaka kamerası kapatıldı.",
+        "body_lost": "Yaka kamerası kapandı (mesai/ekipman).",
+        "no_wear_access": "Yaka kamerasını kullanmak için mesaide olmalısın.",
+        "no_access": "Kamera yayınlarına erişim yetkin yok.",
+        "offline": "Bu yayın artık aktif değil.",
+        "self": "Kendi yaka kameranı izleyemezsin.",
+        "invalid": "Yayına bağlanılamadı.",
+        "busy": "Bağlantı kuruluyor, bekleyin.",
+        "copied": "Kamera konumu panoya kopyalandı.",
+        "signal_sidearm": "Axon Signal: silah çekildi, yaka kamerası kayda başladı.",
+        "signal_vehicle": "Axon Signal: çakar açıldı, yaka kamerası kayda başladı."
+    },
+    "ui": {
+        "brand": "AXON EVIDENCE",
+        "subtitle": "Canlı Yayın Merkezi",
+        "search": "Memur, rozet, plaka ara...",
+        "all": "Tüm Yayınlar",
+        "body": "Yaka Kameraları",
+        "dash": "Araç Kameraları",
+        "body_model": "AXON BODY 3",
+        "dash_model": "AXON FLEET 3",
+        "live_count": "%s canlı yayın",
+        "no_results": "Aktif yayın yok",
+        "no_results_sub": "Mesaideki memurlar yaka kamerasını açtığında burada görünür",
+        "connect": "İZLE",
+        "close": "Kapat",
+        "you": "SEN",
+        "lights_on": "ÇAKAR",
+        "lights_off": "ÇAKAR KAPALI",
+        "siren": "SİREN",
+        "connecting": "BAĞLANILIYOR",
+        "connecting_sub": "Canlı akış başlatılıyor",
+        "no_signal": "SİNYAL YOK",
+        "no_signal_sub": "Cihaz ile bağlantı kurulamıyor",
+        "ended": "YAYIN SONLANDI",
+        "ended_sub": "Cihaz kaydı durdurdu",
+        "rec": "REC",
+        "live": "CANLI",
+        "officer": "MEMUR",
+        "unit": "BİRİM",
+        "plate": "PLAKA",
+        "speed": "HIZ",
+        "heading": "YÖN",
+        "duration": "SÜRE",
+        "channel": "%s / %s",
+        "kmh": "KM/H",
+        "mph": "MPH",
+        "controls": {
+            "switch": "Yayın",
+            "back": "Liste",
+            "exit": "Çıkış",
+            "camera": "Kamera"
+        },
+        "indicator": {
+            "body": "BODY",
+            "dash": "FLEET",
+            "standby": "BEKLEMEDE"
+        },
+        "error": {
+            "offline": "Yayın aktif değil",
+            "no_access": "Erişim yetkin yok",
+            "self": "Kendi kameranı izleyemezsin",
+            "invalid": "Yayına bağlanılamadı",
+            "busy": "Bağlantı kuruluyor, bekleyin"
+        },
+        "cam": {
+            "body": "CAM 1 BODY",
+            "front": "CAM 1 FRONT",
+            "cabin": "CAM 2 CABIN"
+        },
+        "tag": {
+            "bwc": "BWC",
+            "fleet": "FLEET",
+            "body3": "BODY 3",
+            "fleet3": "FLEET 3"
+        },
+        "trigger": {
+            "manual": "MANUAL",
+            "sidearm": "SIGNAL SIDEARM",
+            "vehicle": "SIGNAL VEHICLE",
+            "entry": "BWC SYNC",
+            "lights": "SIGNAL LIGHTBAR"
+        }
+    }
+}

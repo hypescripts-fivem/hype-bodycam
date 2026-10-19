@@ -1,0 +1,90 @@
+{
+    "title": "Axon Bodycam",
+    "target_label": "Body Cameras",
+    "notify": {
+        "body_on": "Body camera on, recording started.",
+        "body_off": "Body camera turned off.",
+        "body_lost": "Body camera turned off (duty/equipment).",
+        "no_wear_access": "You must be on duty to use a body camera.",
+        "no_access": "You don't have access to camera feeds.",
+        "offline": "This feed is no longer active.",
+        "self": "You can't watch your own body camera.",
+        "invalid": "Could not connect to the feed.",
+        "busy": "Connecting, please wait.",
+        "copied": "Camera position copied to clipboard.",
+        "signal_sidearm": "Axon Signal: weapon drawn, body camera started recording.",
+        "signal_vehicle": "Axon Signal: lights on, body camera started recording."
+    },
+    "ui": {
+        "brand": "AXON EVIDENCE",
+        "subtitle": "Live Feed Center",
+        "search": "Search officer, badge, plate...",
+        "all": "All Feeds",
+        "body": "Body Cameras",
+        "dash": "Vehicle Cameras",
+        "body_model": "AXON BODY 3",
+        "dash_model": "AXON FLEET 3",
+        "live_count": "%s live feeds",
+        "no_results": "No active feeds",
+        "no_results_sub": "Feeds appear here when on duty officers turn on their body cameras",
+        "connect": "WATCH",
+        "close": "Close",
+        "you": "YOU",
+        "lights_on": "LIGHTS",
+        "lights_off": "LIGHTS OFF",
+        "siren": "SIREN",
+        "connecting": "CONNECTING",
+        "connecting_sub": "Starting live stream",
+        "no_signal": "NO SIGNAL",
+        "no_signal_sub": "Cannot reach the device",
+        "ended": "FEED ENDED",
+        "ended_sub": "The device stopped recording",
+        "rec": "REC",
+        "live": "LIVE",
+        "officer": "OFFICER",
+        "unit": "UNIT",
+        "plate": "PLATE",
+        "speed": "SPEED",
+        "heading": "HDG",
+        "duration": "DURATION",
+        "channel": "%s / %s",
+        "kmh": "KM/H",
+        "mph": "MPH",
+        "controls": {
+            "switch": "Feed",
+            "back": "List",
+            "exit": "Exit",
+            "camera": "Camera"
+        },
+        "indicator": {
+            "body": "BODY",
+            "dash": "FLEET",
+            "standby": "STANDBY"
+        },
+        "error": {
+            "offline": "Feed is not active",
+            "no_access": "No access",
+            "self": "You can't watch your own camera",
+            "invalid": "Could not connect to the feed",
+            "busy": "Connecting, please wait"
+        },
+        "cam": {
+            "body": "CAM 1 BODY",
+            "front": "CAM 1 FRONT",
+            "cabin": "CAM 2 CABIN"
+        },
+        "tag": {
+            "bwc": "BWC",
+            "fleet": "FLEET",
+            "body3": "BODY 3",
+            "fleet3": "FLEET 3"
+        },
+        "trigger": {
+            "manual": "MANUAL",
+            "sidearm": "SIGNAL SIDEARM",
+            "vehicle": "SIGNAL VEHICLE",
+            "entry": "BWC SYNC",
+            "lights": "SIGNAL LIGHTBAR"
+        }
+    }
+}
