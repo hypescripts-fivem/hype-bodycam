@@ -22,15 +22,15 @@ shared_scripts {
 }
 
 client_scripts {
-    'frameworks/*/cl-main.lua',
+    'frameworks/**/cl-main.lua',
     'modules/inventory/cl-main.lua',
     'modules/notify/cl-main.lua',
-    'modules/target/*/cl-main.lua',
+    'modules/target/**/cl-*.lua',
     'client/*.lua',
 }
 
 server_scripts {
-    'frameworks/*/sv-main.lua',
+    'frameworks/**/sv-main.lua',
     'modules/inventory/sv-main.lua',
     'modules/notify/sv-main.lua',
     'server/*.lua',
