@@ -7,15 +7,13 @@ description 'One Bodycam is an Axon style bodycam & dashcam system for FiveM ser
 scriptname 'hype-bodycam'
 version '1.0.0'
 
--- Frameworks: es_extended, qbx_core, qb-core (auto detected)
--- Inventories: ox_inventory, qb-inventory and the other bridges in modules/inventory
--- Targets: ox_target, qb-target
 dependencies {
     'ox_lib',
 }
 
 shared_scripts {
     '@ox_lib/init.lua',
+    'config/*.lua',
     'shared/*.lua',
     'frameworks/main.lua',
     'modules/main.lua',
@@ -36,8 +34,18 @@ server_scripts {
     'server/*.lua',
 }
 
-files {
+escrow_ignore {
     'config/*.lua',
+    'shared/*.lua',
+    'frameworks/**/*.lua',
+    'frameworks/main.lua',
+    'modules/**/**.lua',
+    'modules/main.lua',
+    'client/*.lua',
+    'server/*.lua',
+}
+
+files {
     'web/build/*.*',
     'web/build/**/*.*',
     'locales/*.json',
