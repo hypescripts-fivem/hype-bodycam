@@ -40,7 +40,7 @@ and authorized players watch live feeds from police station terminals.
 
 <table>
   <tr>
-    <td width="50%"><img src=https://dunb17ur4ymx4.cloudfront.net/packages/images/c1aae1a5f283cfc6f4bd9df9b6e769282de52491.png"" alt="Feed list"></td>
+    <td width="50%"><img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/c1aae1a5f283cfc6f4bd9df9b6e769282de52491.png" alt="Feed list"></td>
     <td width="50%"><img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/7bb0a09dbf1bf3f115290a43a2a84633c818ab99.png" alt="Bodycam view"></td>
   </tr>
   <tr>
