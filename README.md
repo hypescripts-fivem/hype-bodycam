@@ -40,16 +40,16 @@ and authorized players watch live feeds from police station terminals.
 
 <table>
   <tr>
-    <td width="50%"><img src="tebex/screenshots/01-menu-all.png" alt="Feed list"></td>
-    <td width="50%"><img src="tebex/screenshots/06-view-bodycam.png" alt="Bodycam view"></td>
+    <td width="50%"><img src=https://dunb17ur4ymx4.cloudfront.net/packages/images/c1aae1a5f283cfc6f4bd9df9b6e769282de52491.png"" alt="Feed list"></td>
+    <td width="50%"><img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/7bb0a09dbf1bf3f115290a43a2a84633c818ab99.png" alt="Bodycam view"></td>
   </tr>
   <tr>
     <td align="center"><sub>Live feed center</sub></td>
     <td align="center"><sub>Bodycam feed</sub></td>
   </tr>
   <tr>
-    <td><img src="tebex/screenshots/09-view-dashcam-front.png" alt="Dashcam front"></td>
-    <td><img src="tebex/screenshots/11-view-dashcam-cabin.png" alt="Dashcam cabin"></td>
+    <td><img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/189822c8a4ab4500c2ccb1e001f71a56a825bdc3.png" alt="Dashcam front"></td>
+    <td><img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/ddca4494e0984f47ff4df40e9caa678564352991.png" alt="Dashcam cabin"></td>
   </tr>
   <tr>
     <td align="center"><sub>Dashcam, front camera</sub></td>
