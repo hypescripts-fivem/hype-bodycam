@@ -70,7 +70,7 @@ local function mayWear()
     return true
 end
 
----Rebuilds the on-screen Axon indicator from the stream list and pushes it to the NUI.
+---Rebuilds the on-screen status indicator from the stream list and pushes it to the NUI.
 ---Nothing is sent when the payload is unchanged.
 ---@return nil
 local function updateIndicator()
@@ -98,7 +98,7 @@ local function updateIndicator()
         payload.body, payload.serial or "-", payload.dash, payload.dashSerial or "-")
 
     if Config.UI.indicator then
-        payload.locales = not localesSent and lib.getLocales() or nil
+        payload.locales = not localesSent and GetBrandedLocales() or nil
         SendNUIMessage({ action = "nui/indicator", payload = payload })
         Debug("info", "indicator sent to nui (locales attached: %s)", payload.locales ~= nil)
         localesSent = true
@@ -188,7 +188,7 @@ RegisterNetEvent("hype-bodycam:client:state", function(active)
     if bodycamOn then CreateThread(requestDashcam) end
 end)
 
----Plays an Axon recording beep. Volume falls off with distance for bystanders.
+---Plays a recording beep. Volume falls off with distance for bystanders.
 ---@param kind "start"|"stop"|"reminder" Beep to play
 ---@param coords vector3|false Source position, or false when it is the player's own camera
 ---@return nil

@@ -1,5 +1,5 @@
 {
-    "title": "Axon Bodycam",
+    "title": "Bodycam",
     "target_label": "Body Cameras",
     "notify": {
         "body_on": "Body camera on, recording started.",
@@ -12,18 +12,18 @@
         "invalid": "Could not connect to the feed.",
         "busy": "Connecting, please wait.",
         "copied": "Camera position copied to clipboard.",
-        "signal_sidearm": "Axon Signal: weapon drawn, body camera started recording.",
-        "signal_vehicle": "Axon Signal: lights on, body camera started recording."
+        "signal_sidearm": "Auto record: weapon drawn, body camera started recording.",
+        "signal_vehicle": "Auto record: lights on, body camera started recording."
     },
     "ui": {
-        "brand": "AXON EVIDENCE",
+        "brand": "BODYCAM",
         "subtitle": "Live Feed Center",
         "search": "Search officer, badge, plate...",
         "all": "All Feeds",
         "body": "Body Cameras",
         "dash": "Vehicle Cameras",
-        "body_model": "AXON BODY 3",
-        "dash_model": "AXON FLEET 3",
+        "body_model": "BODY CAM",
+        "dash_model": "DASH CAM",
         "live_count": "%s live feeds",
         "no_results": "No active feeds",
         "no_results_sub": "Feeds appear here when on duty officers turn on their body cameras",
@@ -76,15 +76,15 @@
         "tag": {
             "bwc": "BWC",
             "fleet": "FLEET",
-            "body3": "BODY 3",
-            "fleet3": "FLEET 3"
+            "body3": "HD",
+            "fleet3": "HD"
         },
         "trigger": {
             "manual": "MANUAL",
-            "sidearm": "SIGNAL SIDEARM",
-            "vehicle": "SIGNAL VEHICLE",
+            "sidearm": "AUTO WEAPON",
+            "vehicle": "AUTO VEHICLE",
             "entry": "BWC SYNC",
-            "lights": "SIGNAL LIGHTBAR"
+            "lights": "AUTO LIGHTBAR"
         }
     }
 }

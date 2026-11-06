@@ -1,5 +1,5 @@
 ['bodycam'] = {
-    label = 'Axon Body 3',
+    label = 'Body Camera',
     weight = 250,
     stack = false,
     close = true,

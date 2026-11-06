@@ -1,2 +1,3 @@
-/tebex/description.html
+/tebex/*.html
+/tebex/*.md
 /tebex/source

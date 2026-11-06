@@ -4,7 +4,7 @@
 
 # hype-bodycam
 
-**Axon-style bodycam & dashcam system for FiveM**
+**Realistic bodycam & dashcam system for FiveM**
 
 On-duty officers switch their bodycam on with an item, patrol vehicles start recording automatically,
 and authorized players watch live feeds from police station terminals.
@@ -25,7 +25,7 @@ and authorized players watch live feeds from police station terminals.
 
 | | |
 | --- | --- |
-| **Item based bodycam** | Officers turn their body-worn camera on and off with an item. Every device gets its own Axon format serial (`X60312274`), shown in the inventory tooltip. |
+| **Item based bodycam** | Officers turn their body-worn camera on and off with an item. Every device gets its own serial number (`X60312274`), shown in the inventory tooltip. |
 | **Automatic dashcams** | Emergency vehicles start recording as soon as an officer gets in. Pick vehicle classes and models, exclude the ones that should not record. |
 | **Front & cabin cameras** | Each patrol vehicle has a windscreen camera and a second one facing the rear seats. Viewers switch between them with <kbd>TAB</kbd>. |
 | **Signal triggers** | Recording starts by itself when a firearm is drawn, or when a patrol vehicle's lights go on for every officer inside and nearby. |
@@ -138,7 +138,7 @@ Add to `ox_inventory/data/items.lua`:
 
 ```lua
 ['bodycam'] = {
-    label = 'Axon Body 3',
+    label = 'Body Camera',
     weight = 250,
     stack = false,
     close = true,
@@ -161,7 +161,7 @@ Add to `qb-core/shared/items.lua`:
 ```lua
 bodycam = {
     name = 'bodycam',
-    label = 'Axon Body 3',
+    label = 'Body Camera',
     weight = 250,
     type = 'item',
     image = 'bodycam.png',

@@ -65,7 +65,7 @@ end
 ---@return nil
 local function notify(source, description, notifyType)
     Debug("info", "notify %s (%s): %s", source, notifyType or "inform", description)
-    Modules.Server.Notify.SendNotify(source, locale("title"), description, 5000, notifyType or "inform")
+    Modules.Server.Notify.SendNotify(source, BrandedLocale("title"), description, 5000, notifyType or "inform")
 end
 
 ---Builds the stream id of a player's bodycam.

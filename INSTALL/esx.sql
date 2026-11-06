@@ -9,12 +9,12 @@
 
 -- ESX Legacy (items table with a weight column)
 INSERT INTO `items` (`name`, `label`, `weight`, `rare`, `can_remove`) VALUES
-    ('bodycam', 'Axon Body 3', 1, 0, 1)
+    ('bodycam', 'Body Camera', 1, 0, 1)
 ON DUPLICATE KEY UPDATE `label` = VALUES(`label`), `weight` = VALUES(`weight`);
 
 -- Older ESX (items table with a limit column) - use this instead of the insert above
 -- INSERT INTO `items` (`name`, `label`, `limit`, `rare`, `can_remove`) VALUES
---     ('bodycam', 'Axon Body 3', 1, 0, 1)
+--     ('bodycam', 'Body Camera', 1, 0, 1)
 -- ON DUPLICATE KEY UPDATE `label` = VALUES(`label`);
 
 -- Note: the built-in ESX inventory stores no per-item metadata, so a device serial

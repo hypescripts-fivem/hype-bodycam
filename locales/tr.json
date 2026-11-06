@@ -1,5 +1,5 @@
 {
-    "title": "Axon Bodycam",
+    "title": "Bodycam",
     "target_label": "Yaka Kameraları",
     "notify": {
         "body_on": "Yaka kamerası açıldı, kayıt başladı.",
@@ -12,18 +12,18 @@
         "invalid": "Yayına bağlanılamadı.",
         "busy": "Bağlantı kuruluyor, bekleyin.",
         "copied": "Kamera konumu panoya kopyalandı.",
-        "signal_sidearm": "Axon Signal: silah çekildi, yaka kamerası kayda başladı.",
-        "signal_vehicle": "Axon Signal: çakar açıldı, yaka kamerası kayda başladı."
+        "signal_sidearm": "Otomatik kayıt: silah çekildi, yaka kamerası kayda başladı.",
+        "signal_vehicle": "Otomatik kayıt: çakar açıldı, yaka kamerası kayda başladı."
     },
     "ui": {
-        "brand": "AXON EVIDENCE",
+        "brand": "BODYCAM",
         "subtitle": "Canlı Yayın Merkezi",
         "search": "Memur, rozet, plaka ara...",
         "all": "Tüm Yayınlar",
         "body": "Yaka Kameraları",
         "dash": "Araç Kameraları",
-        "body_model": "AXON BODY 3",
-        "dash_model": "AXON FLEET 3",
+        "body_model": "BODY CAM",
+        "dash_model": "DASH CAM",
         "live_count": "%s canlı yayın",
         "no_results": "Aktif yayın yok",
         "no_results_sub": "Mesaideki memurlar yaka kamerasını açtığında burada görünür",
@@ -76,15 +76,15 @@
         "tag": {
             "bwc": "BWC",
             "fleet": "FLEET",
-            "body3": "BODY 3",
-            "fleet3": "FLEET 3"
+            "body3": "HD",
+            "fleet3": "HD"
         },
         "trigger": {
             "manual": "MANUAL",
-            "sidearm": "SIGNAL SIDEARM",
-            "vehicle": "SIGNAL VEHICLE",
+            "sidearm": "AUTO WEAPON",
+            "vehicle": "AUTO VEHICLE",
             "entry": "BWC SYNC",
-            "lights": "SIGNAL LIGHTBAR"
+            "lights": "AUTO LIGHTBAR"
         }
     }
 }

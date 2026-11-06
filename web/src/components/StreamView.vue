@@ -2,7 +2,7 @@
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
 import { useBodycamStore } from '../store';
 import { cardinal, duration, pad, stamp } from '../utils';
-import AxonMark from './AxonMark.vue';
+import BrandMark from './BrandMark.vue';
 import NoiseCanvas from './NoiseCanvas.vue';
 
 const store = useBodycamStore();
@@ -49,20 +49,20 @@ const controls = computed(() => [
         <div class="scanlines absolute inset-0" />
         <div class="absolute inset-0" :class="isDash ? 'dash-tint' : 'fisheye'" />
 
-        <!-- Sağ üst: gerçek Axon damgası (tarih saat dilim / model seri) + kamera ve tetikleyici tag'leri -->
+        <!-- Sağ üst: kayıt damgası (tarih saat dilim / model seri) + kamera ve tetikleyici tag'leri -->
         <div class="absolute right-[1.6vw] top-[2.4vw] flex items-start gap-[0.6vw]">
-            <div class="axon-stamp text-[1.2vw] leading-[1.25]">
+            <div class="rec-stamp text-[1.2vw] leading-[1.25]">
                 <div>{{ stamp(now, store.ui.utcOffset) }}</div>
                 <div>{{ isDash ? store.locale('ui.dash_model') : store.locale('ui.body_model') }} {{ store.stream?.serial }}</div>
                 <div class="text-[0.82vw] text-white/90">{{ tagLine }}</div>
             </div>
-            <AxonMark class="mt-[0.15vw] h-[3.3vw] w-[3.3vw] opacity-75" />
+            <BrandMark class="mt-[0.15vw] h-[3.3vw] w-[3.3vw] text-accent opacity-75" />
         </div>
 
         <!-- Sol üst: kayıt + kanal -->
         <div class="osd absolute left-[3rem] top-[2.6rem]">
             <div class="flex items-center gap-2.5 text-[0.95rem] font-bold tracking-[0.18em]">
-                <AxonMark class="h-[1.15rem] w-[1.15rem] text-axon" />
+                <BrandMark class="h-[1.15rem] w-[1.15rem] text-accent" />
                 <span class="blink flex items-center gap-1.5 text-rec">
                     <span class="h-[0.65rem] w-[0.65rem] rounded-full bg-rec" />
                     {{ store.locale('ui.rec') }}
@@ -86,7 +86,7 @@ const controls = computed(() => [
 
         <!-- Sol alt: memur / araç -->
         <div class="osd absolute bottom-[2.8rem] left-[3rem] max-w-[34rem]">
-            <div class="text-[0.62rem] font-bold tracking-[0.28em] text-axon">{{ isDash ? store.locale('ui.unit') : store.locale('ui.officer') }}</div>
+            <div class="text-[0.62rem] font-bold tracking-[0.28em] text-accent">{{ isDash ? store.locale('ui.unit') : store.locale('ui.officer') }}</div>
             <div class="font-display text-[1.9rem] font-bold leading-none tracking-[0.03em]">
                 {{ isDash ? (store.stream?.vehicle ?? '') : store.stream?.name }}
             </div>
@@ -101,7 +101,7 @@ const controls = computed(() => [
 
         <!-- Sağ alt: konum (+ dashcam hız) -->
         <div class="osd absolute bottom-[2.8rem] right-[3rem] text-right">
-            <div v-if="isDash && store.hud.speed != null" class="mb-1 font-axon text-[1.5rem] leading-none">
+            <div v-if="isDash && store.hud.speed != null" class="mb-1 font-stamp text-[1.5rem] leading-none">
                 {{ store.hud.speed }} <span class="text-[0.8rem]">{{ speedUnit }}</span>
             </div>
             <div class="text-[0.95rem] font-semibold tracking-[0.04em]">{{ street }}</div>
@@ -132,7 +132,7 @@ const controls = computed(() => [
                 <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
                     <div class="inline-block bg-black/80 px-6 py-3">
                         <div class="flex items-center justify-center gap-3">
-                            <AxonMark class="h-7 w-7" :class="overlayText.alert ? 'text-alert' : 'text-axon'" />
+                            <BrandMark class="h-7 w-7" :class="overlayText.alert ? 'text-alert' : 'text-accent'" />
                             <span class="font-display text-[2.4rem] font-bold leading-none tracking-[0.2em]" :class="overlayText.alert ? 'text-alert' : 'text-paper'">
                                 {{ overlayText.title }}<span v-if="!overlayText.alert" class="blink">_</span>
                             </span>

@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useBodycamStore, type Trigger } from '../store';
-import AxonMark from './AxonMark.vue';
+import BrandMark from './BrandMark.vue';
 
-/** Bodycam açıkken memurun kendi ekranındaki Axon cihaz göstergesi (model, seri, kamera, tetikleyici) */
+/** Bodycam açıkken memurun kendi ekranındaki cihaz göstergesi (model, seri, kamera, tetikleyici) */
 const store = useBodycamStore();
 
 const positions: Record<string, string> = {
@@ -20,10 +20,10 @@ const triggerLabel = (trigger?: Trigger) => (trigger ? store.locale(`ui.trigger.
 </script>
 
 <template>
-    <div class="pointer-events-none fixed min-w-[16rem] border border-paper/15 bg-black/60 font-axon" :class="position">
+    <div class="pointer-events-none fixed min-w-[16rem] border border-paper/15 bg-black/60 font-stamp" :class="position">
         <!-- Bodycam -->
         <div class="flex items-start gap-2.5 px-2.5 py-2">
-            <AxonMark class="mt-0.5 h-[1.9rem] w-[1.9rem] shrink-0 opacity-90" />
+            <BrandMark class="mt-0.5 h-[1.9rem] w-[1.9rem] shrink-0 text-accent opacity-90" />
             <div class="min-w-0 flex-1">
                 <div class="flex items-center gap-2 text-[0.7rem] font-bold">
                     <span class="blink h-2 w-2 rounded-full bg-rec shadow-[0_0_0.4rem_var(--color-rec)]" />
@@ -32,7 +32,7 @@ const triggerLabel = (trigger?: Trigger) => (trigger ? store.locale(`ui.trigger.
                 </div>
                 <div class="mt-0.5 text-[0.82rem] leading-tight tracking-[0.04em] text-white">{{ store.indicator.serial ?? '—' }}</div>
                 <div class="mt-1 flex flex-wrap items-center gap-1 text-[0.52rem] font-bold tracking-[0.12em]">
-                    <span class="bg-axon px-1 py-px text-console">{{ store.locale('ui.tag.bwc') }}</span>
+                    <span class="bg-accent px-1 py-px text-console">{{ store.locale('ui.tag.bwc') }}</span>
                     <span class="border border-paper/35 px-1 text-paper/75">{{ store.locale('ui.cam.body') }}</span>
                     <span
                         v-if="store.indicator.trigger"
@@ -52,7 +52,7 @@ const triggerLabel = (trigger?: Trigger) => (trigger ? store.locale(`ui.trigger.
                 <span v-else class="ml-auto tracking-[0.12em] text-paper/60">{{ store.locale('ui.indicator.standby') }}</span>
             </div>
             <div v-if="store.indicator.dash" class="mt-1 flex flex-wrap items-center gap-1 text-[0.52rem] font-bold tracking-[0.12em]">
-                <span class="bg-axon px-1 py-px text-console">{{ store.locale('ui.tag.fleet') }}</span>
+                <span class="bg-accent px-1 py-px text-console">{{ store.locale('ui.tag.fleet') }}</span>
                 <span class="border border-paper/35 px-1 text-paper/75">{{ store.locale('ui.cam.front') }}</span>
                 <span
                     v-if="store.indicator.dashTrigger"

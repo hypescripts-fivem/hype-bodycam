@@ -6,11 +6,20 @@ return {
 
     Item = "bodycam",
 
+    -- Names shown in notifications and on the interface.
+    -- false = use the text from the locale file (so every language keeps its own translation).
+    Branding = {
+        title = false,           -- Notification title (locale default: "Bodycam")
+        header = false,          -- Feed list header (locale default: "BODYCAM")
+        bodyModel = false,       -- Body camera model in the recording stamp and indicator (locale default: "BODY CAM")
+        dashModel = false,       -- Vehicle camera model in the recording stamp and indicator (locale default: "DASH CAM")
+    },
+
     -- Notification resource: "auto" picks okokNotify, ps-ui or ox_lib, whichever is running.
     -- Set it to one of those names to force it.
     Notifications = "auto",
 
-    -- Device serials (Axon format: X + 8 digits, e.g. X60312274)
+    -- Device serials (X + 8 digits, e.g. X60312274)
     -- Bodycam: assigned randomly the first time an item is created, shown in the inventory tooltip
     -- Fleet: derived from the plate, so a vehicle always reports the same serial
     Serial = {
@@ -91,24 +100,24 @@ return {
         strength = 0.35,
     },
 
-    -- Recording beeps (real Axon audio): double beep on start, single on stop, periodic reminder while recording.
+    -- Recording beeps: double beep on start, single on stop, periodic reminder while recording.
     -- Nearby players hear them too, attenuated by distance.
     Beep = {
         enabled = true,
-        interval = 120,          -- s between reminder beeps while recording (Axon default is 2 min), 0 = off
+        interval = 120,          -- s between reminder beeps while recording, 0 = off
         range = 8.0,             -- m within which other players hear the beeps
         volume = 0.12,           -- 0.0 - 1.0 (the source file is loud; above 0.2 gets annoying)
     },
 
-    -- Axon Signal: triggers that start recording automatically for on-duty officers carrying the item
+    -- Auto record: triggers that start recording automatically for on-duty officers carrying the item
     Signal = {
-        sidearm = {              -- Signal Sidearm: on drawing a firearm
+        sidearm = {              -- On drawing a firearm
             enabled = true,
             excluded = { `WEAPON_STUNGUN`, `WEAPON_STUNGUN_MP`, `WEAPON_FLAREGUN`, `WEAPON_FIREEXTINGUISHER`, `WEAPON_PETROLCAN` },
         },
-        vehicle = {              -- Signal Vehicle: when a dashcam vehicle's lights go on, for officers inside and nearby
+        vehicle = {              -- When a dashcam vehicle's lights go on, for officers inside and nearby
             enabled = true,
-            range = 10.0,        -- m (Axon: ~30 ft)
+            range = 10.0,        -- m
         },
     },
 
@@ -116,7 +125,7 @@ return {
         utcOffset = false,       -- Timezone for the recording timestamp (e.g. 3 = +0300), false = the player's local clock
         locale = "en-US",        -- Date format (Intl locale tag)
         speedUnit = "kmh",       -- "kmh" | "mph"
-        indicator = true,        -- Axon status indicator on the officer's screen while recording
+        indicator = true,        -- Status indicator on the officer's screen while recording
         indicatorPosition = "top-right", -- "top-right" | "top-left" | "bottom-right" | "bottom-left"
     },
 }

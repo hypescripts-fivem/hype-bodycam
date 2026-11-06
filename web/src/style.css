@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Axon kayıt damgasında kullanılan font */
+/* Kayıt damgasında kullanılan font */
 @font-face {
   font-family: "Klartext Mono";
   src: url("./assets/KlartextMonoBold.ttf") format("truetype");
@@ -11,10 +11,10 @@
 @theme {
   --font-mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
   --font-display: "Rajdhani", "JetBrains Mono", sans-serif;
-  --font-axon: "Klartext Mono", "JetBrains Mono", monospace;
+  --font-stamp: "Klartext Mono", "JetBrains Mono", monospace;
 
   --color-paper: #f4f4f1;
-  --color-axon: #ffd100;
+  --color-accent: #ffd100;
   --color-rec: #ff3b30;
   --color-ok: #4ade80;
   --color-alert: #f87171;
@@ -58,14 +58,14 @@ body {
   display: none;
 }
 
-/* Axon OSD yazısı: beyaz, ince siyah kontur (parlak sahnede okunur) */
+/* OSD yazısı: beyaz, ince siyah kontur (parlak sahnede okunur) */
 .osd {
   text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 0 0 0.5rem rgba(0, 0, 0, 0.55);
 }
 
-/* Gerçek Axon damgası: beyaz, 1px siyah kontur */
-.axon-stamp {
-  font-family: var(--font-axon);
+/* Kayıt damgası: beyaz, 1px siyah kontur */
+.rec-stamp {
+  font-family: var(--font-stamp);
   font-weight: 700;
   color: #fff;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;

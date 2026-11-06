@@ -4,7 +4,7 @@
 
 bodycam = {
     name = 'bodycam',
-    label = 'Axon Body 3',
+    label = 'Body Camera',
     weight = 250,
     type = 'item',
     image = 'bodycam.png',

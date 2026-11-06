@@ -3,7 +3,7 @@ import beepUrl from '../assets/beep.wav';
 export type BeepKind = 'start' | 'stop' | 'reminder';
 
 /**
- * beep.wav zaten aralıklı iki bip içerir (gerçek Axon sesi), her tür dosyayı bir kez çalar.
+ * beep.wav zaten aralıklı iki bip içerir (çift bip), her tür dosyayı bir kez çalar.
  * Açılış ve kapanış aynı; hatırlatma biraz daha kısa/ince
  */
 const patterns: Record<BeepKind, { at: number; rate: number }[]> = {

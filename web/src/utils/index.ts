@@ -33,7 +33,7 @@ export const duration = (ms: number): string => {
 };
 
 /**
- * Gerçek Axon kayıt damgası: "2020-12-05 18:40:12 -0500"
+ * Kayıt damgası: "2020-12-05 18:40:12 -0500"
  * @param utcOffset Saat dilimi (saat), false = yerel saat
  */
 export const stamp = (date: Date, utcOffset: number | false = false): string => {

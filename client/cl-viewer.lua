@@ -39,7 +39,7 @@ Debug("info", "bodycam viewer loaded: %s terminals, filter=%s, loadTimeout=%sms,
 ---@return nil
 local function notify(description, notifyType)
     Debug("info", "notify (%s): %s", notifyType or "inform", description)
-    Modules.Client.Notify.SendNotify(locale("title"), description, 5000, notifyType or "inform")
+    Modules.Client.Notify.SendNotify(BrandedLocale("title"), description, 5000, notifyType or "inform")
 end
 
 ---Rounds a number to a fixed number of decimals.
@@ -335,6 +335,7 @@ local function exitCamera()
     ClearFocus()
     ClearTimecycleModifier()
     FreezeEntityPosition(cache.ped, false)
+    LocalPlayer.state.invBusy = false
     if not radarWasHidden then DisplayRadar(true) end
 
     Debug("success", "camera state restored, releasing the viewer slot")
@@ -422,7 +423,8 @@ local function connect(id)
         DisplayRadar(false)
         applyFilter()
         FreezeEntityPosition(cache.ped, true)
-        Debug("info", "viewer frozen, radar hidden (was already hidden: %s)", radarWasHidden)
+        LocalPlayer.state.invBusy = true
+        Debug("info", "viewer frozen, radar hidden (was already hidden: %s), inventory locked", radarWasHidden)
     end
 
     local started = GetGameTimer()
@@ -620,7 +622,7 @@ function OpenBodycams(fromTerminal)
     SendNUIMessage({
         action = "nui/open",
         payload = {
-            locales = lib.getLocales(),
+            locales = GetBrandedLocales(),
             ui = Config.UI,
             debug = Config.Debug,
             streams = streamList(),

@@ -3,7 +3,7 @@ import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
 import { useBodycamStore, type Filter } from '../store';
 import { duration, pad } from '../utils';
 import AppIcon from './AppIcon.vue';
-import AxonMark from './AxonMark.vue';
+import BrandMark from './BrandMark.vue';
 
 const store = useBodycamStore();
 
@@ -30,8 +30,8 @@ const filters = computed<{ id: Filter; label: string; icon: string }[]>(() => [
             <!-- Üst bar -->
             <header class="flex items-center gap-5 border-b border-line px-6 py-4">
                 <div class="flex items-center gap-3">
-                    <div class="flex h-11 w-11 items-center justify-center border border-axon/40 bg-axon/10 text-axon">
-                        <AxonMark class="h-6 w-6" />
+                    <div class="flex h-11 w-11 items-center justify-center border border-accent/40 bg-accent/10 text-accent">
+                        <BrandMark class="h-6 w-6" />
                     </div>
                     <div>
                         <div class="font-display text-[1.5rem] font-bold uppercase leading-none tracking-[0.14em] text-paper">{{ store.locale('ui.brand') }}</div>
@@ -72,7 +72,7 @@ const filters = computed<{ id: Filter; label: string; icon: string }[]>(() => [
                         v-for="filter in filters" :key="filter.id"
                         class="flex w-full cursor-pointer items-center gap-3 border-l-2 px-3 py-2.5 text-left text-[0.82rem] transition"
                         :class="store.filter === filter.id
-                            ? 'border-axon bg-paper/[0.07] text-paper'
+                            ? 'border-accent bg-paper/[0.07] text-paper'
                             : 'border-transparent text-paper/55 hover:bg-paper/[0.04] hover:text-paper/85'"
                         @click="store.filter = filter.id"
                     >
@@ -87,7 +87,7 @@ const filters = computed<{ id: Filter; label: string; icon: string }[]>(() => [
                     <div v-if="store.filtered.length" class="grid grid-cols-[repeat(auto-fill,minmax(19rem,1fr))] gap-3">
                         <button
                             v-for="stream in store.filtered" :key="stream.id"
-                            class="clip-card group flex cursor-pointer flex-col border border-line bg-console-2 text-left transition hover:border-axon/50 disabled:cursor-not-allowed disabled:opacity-45"
+                            class="clip-card group flex cursor-pointer flex-col border border-line bg-console-2 text-left transition hover:border-accent/50 disabled:cursor-not-allowed disabled:opacity-45"
                             :disabled="stream.self || store.busy"
                             @click="store.Connect(stream)"
                         >
@@ -101,11 +101,11 @@ const filters = computed<{ id: Filter; label: string; icon: string }[]>(() => [
                                     <span class="text-paper/60 tabular-nums">{{ duration(now - (stream.startedAt ?? now)) }}</span>
                                 </div>
                                 <div class="absolute right-2.5 top-2 flex items-center gap-1 text-[0.55rem] font-bold tracking-[0.12em]">
-                                    <span class="bg-axon px-1 py-px text-console">{{ stream.type === 'body' ? store.locale('ui.tag.bwc') : store.locale('ui.tag.fleet') }}</span>
+                                    <span class="bg-accent px-1 py-px text-console">{{ stream.type === 'body' ? store.locale('ui.tag.bwc') : store.locale('ui.tag.fleet') }}</span>
                                     <span class="border border-paper/35 px-1 text-paper/75">{{ stream.type === 'body' ? store.locale('ui.tag.body3') : store.locale('ui.tag.fleet3') }}</span>
                                 </div>
                                 <div class="absolute bottom-2 left-2.5 flex items-center gap-1.5">
-                                    <span class="font-axon text-[0.68rem] tracking-[0.08em] text-paper/70">{{ stream.serial }}</span>
+                                    <span class="font-stamp text-[0.68rem] tracking-[0.08em] text-paper/70">{{ stream.serial }}</span>
                                     <span
                                         v-if="stream.trigger"
                                         class="border px-1 text-[0.52rem] font-bold tracking-[0.12em]"
@@ -123,7 +123,7 @@ const filters = computed<{ id: Filter; label: string; icon: string }[]>(() => [
                                 </div>
 
                                 <div class="absolute inset-0 flex items-center justify-center bg-black/55 opacity-0 transition group-hover:opacity-100 group-disabled:hidden">
-                                    <span class="flex items-center gap-2 border border-axon/60 bg-black/60 px-3 py-1.5 text-[0.72rem] font-bold tracking-[0.2em] text-axon">
+                                    <span class="flex items-center gap-2 border border-accent/60 bg-black/60 px-3 py-1.5 text-[0.72rem] font-bold tracking-[0.2em] text-accent">
                                         <AppIcon name="play" class="h-3.5 w-3.5" />
                                         {{ store.locale('ui.connect') }}
                                     </span>
@@ -135,7 +135,7 @@ const filters = computed<{ id: Filter; label: string; icon: string }[]>(() => [
                                 <div class="min-w-0 flex-1">
                                     <div class="flex items-center gap-2">
                                         <span class="truncate font-display text-[1.2rem] font-bold leading-tight text-paper">{{ stream.name }}</span>
-                                        <span v-if="stream.self" class="border border-axon/50 px-1 text-[0.55rem] font-bold tracking-[0.15em] text-axon">{{ store.locale('ui.you') }}</span>
+                                        <span v-if="stream.self" class="border border-accent/50 px-1 text-[0.55rem] font-bold tracking-[0.15em] text-accent">{{ store.locale('ui.you') }}</span>
                                     </div>
                                     <div class="mt-0.5 truncate text-[0.68rem] tracking-[0.06em] text-paper/55">
                                         <template v-if="stream.type === 'dash'">{{ stream.vehicle }}</template>
@@ -144,14 +144,14 @@ const filters = computed<{ id: Filter; label: string; icon: string }[]>(() => [
                                 </div>
                                 <div class="shrink-0 text-right">
                                     <div v-if="stream.type === 'dash' && stream.plate" class="border border-paper/30 bg-paper/90 px-1.5 text-[0.68rem] font-bold tracking-[0.1em] text-console">{{ stream.plate }}</div>
-                                    <div v-if="stream.callsign" class="mt-1 text-[0.66rem] font-semibold tracking-[0.1em] text-axon/85">{{ stream.callsign }}</div>
+                                    <div v-if="stream.callsign" class="mt-1 text-[0.66rem] font-semibold tracking-[0.1em] text-accent/85">{{ stream.callsign }}</div>
                                 </div>
                             </div>
                         </button>
                     </div>
 
                     <div v-else class="absolute inset-0 flex flex-col items-center justify-center text-center">
-                        <AxonMark class="h-14 w-14 text-paper/10" />
+                        <BrandMark class="h-14 w-14 text-paper/10" />
                         <div class="mt-4 font-display text-[1.4rem] font-bold tracking-[0.15em] text-paper/60">{{ store.locale('ui.no_results') }}</div>
                         <div class="mt-1 max-w-[26rem] text-[0.72rem] text-paper/35">{{ store.locale('ui.no_results_sub') }}</div>
                     </div>
