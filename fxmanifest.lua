@@ -5,7 +5,7 @@ author 'vezironi'
 description 'hype-bodycam is a bodycam & dashcam system for FiveM servers. On duty officers switch their bodycam on with an item, police vehicles start recording automatically when they get in, and authorized players watch live feeds from police station terminals.'
 
 scriptname 'hype-bodycam'
-version '1.0.0'
+version '1.0.1'
 
 dependencies {
     'ox_lib',
